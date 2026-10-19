@@ -1,45 +1,572 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico">
-    <title>Choyo!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../MiPaginaWeb/CSS/EstilosIndex.CSS">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choyo | Portafolio de ilustración, animación y desarrollo de software</title>
+  <meta name="description" content="Portafolio de Samantha López (Choyo): estudiante de Desarrollo de Software, ilustradora digital y animadora 2D y 3D en Blender.">
+  <meta name="keywords" content="portafolio, Choyo, ilustración digital, animación 2D, modelado 3D, Blender, desarrollo de software">
+  <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/EstilosIndex.CSS">
 </head>
 <body>
-    <section id="bienvenida">
-    <p>Esta es la página de una estudiante muy apasionada de Desarrollo de Software. ¡Siéntete libre de explorar mi trabajo todo lo que quieras!</p>
-</section>
-    <header>
-        <div class ="header-brand">
-            <img src="Imagenes/LogoTransparente.png" alt="Logo bonito, tigre bonito.">
-            <div>
-                <h1>¡Bienvenido a Choyo!</h1>
-            </div>
-        </div>
 
-        <nav>
-            <ul>
-                <li><a href="#Sobre-mi">¡Sobre mí!</a></li>
-                <li><a href="#portafolio">¡Mi portafolio!</a></li>
-                <li><a href="#contacto">¡Contáctame!</a></li>
-            </ul>
-        </nav>
-    </header>
-<section id="sobre-mi"> <h2>¡Hola, esta soy yo!</h2>
-    <img src="../MiPaginaWeb/Imagenes/SamoImagen.png" alt="Imagen de Samo">
-    <div class="texto-bio">
-        <p>Mi nombre es Samantha López, aunque por estos rumbos me conocen como <strong>Shoujoyo</strong> (pero puedes decirme simplemente Choyo). Provengo del Colegio de Estudios Científicos y Tecnológicos del Estado de Guanajuato (CECyTEG), egresando como Técnica en Animación Digital y actualmente, me encuentro estudiando el 4to cuatrimestre del TSU en Desarrollo de Software Multiplataforma en la Universidad tecnológica de León (UTL).</p>
-        <p><strong>¡Soy alguien muy alegre y bastante comprometida cuando disfruta mucho de algo!</strong></p>
-        <p>Desde pequeña, crecí rodeada de toda la influencia que el internet puede tener, amando los videojuegos, el arte, la animación, películas y todo lo que hay detrás de estas diciplinas que me parecen preciosas. Es por ello que, uno de mis más grandes sueños, es poder dedicarme a ser una de las artistas que están trabajando para brindar a la gente historias con las que puedan identificarse y facinarse.</p>
-        <p></p>
-        <p>Disfruto muchísimo de dibujar y animar en mis tiempos libres, buscando un estílo único con el que la gente pueda reconocerme.</p>
-        <p>Me apasionan las partes del <strong>storyboard, animatic, rough-animation, lineart de la animación, los detalles y el coloreado</strong>. Aunado a eso, también tengo <strong>conocimientos en blender</strong>, siendo estos en el <strong>modelado sencillo 3D, implementación de huesos, asignación de pesos y animación</strong>.</p>
-        <p>También, gracias a lo que actualmente me encuentro estudiando, la parte del <strong>back-end</strong> es también algo de lo que disfruto, conociendo <strong>lenguajes como C#, C, Java, y actualmente haciendo uso de Kotlin y python</strong>. Y, por obvias razones, el <strong>front-end</strong> no se queda atrás!, siendo que puedo especializarme en el <strong>maquetado de una página web, el prototipaje, diseños de logos</strong> y demás.</p>
-        <p><strong>¡Si te interesa todo esto que hago, échale un vistazo a mi portafolio!</strong></p>
+  <!-- Encabezado-->
+  <header class="encabezado text-center text-white py-5 px-3">
+    <img src="Imagenes/LogoTransparente.png" class="logo mb-3" alt="Logo de Choyo: tigre ilustrado">
+    <h1>¡Bienvenido a Choyo!</h1>
+    <p class="lead">Esta es la página de una estudiante muy apasionada de Desarrollo de Software. ¡Siéntete libre de explorar mi trabajo todo lo que quieras!</p>
+  </header>
+
+  <!-- Menú -->
+  <nav class="menu sticky-top">
+    <ul class="nav nav-fill">
+      <li class="nav-item"><a class="nav-link" href="#sobre-mi">¡Sobre mí!</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portafolio">¡Mi portafolio!</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contacto">¡Contáctame!</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sobre mí-->
+  <section id="sobre-mi" class="container py-5">
+    <h2 class="text-center mb-4">¡Hola, esta soy yo!</h2>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-5 text-center mb-4">
+        <img src="Imagenes/samoImagen.jpg" class="img-fluid rounded" alt="Samantha López, Choyo, estudiante de Desarrollo de Software e ilustradora">
+      </div>
+      <div class="col-12 col-md-7 mb-4">
+        <div class="card bio">
+          <div class="card-body p-4">
+            <p>Mi nombre es Samantha López, aunque por estos rumbos me conocen como <strong>Shoujoyo</strong> (pero puedes decirme simplemente Choyo). Provengo del Colegio de Estudios Científicos y Tecnológicos del Estado de Guanajuato (CECyTEG), egresando como Técnica en Animación Digital y actualmente, me encuentro estudiando el 4to cuatrimestre del TSU en Desarrollo de Software Multiplataforma en la Universidad Tecnológica de León (UTL).</p>
+            <p><strong>¡Soy alguien muy alegre y bastante comprometida cuando disfruta mucho de algo!</strong></p>
+            <p>Desde pequeña, crecí rodeada de toda la influencia que el internet puede tener, amando los videojuegos, el arte, la animación, películas y todo lo que hay detrás de estas disciplinas que me parecen preciosas. Es por ello que, uno de mis más grandes sueños, es poder dedicarme a ser una de las artistas que están trabajando para brindar a la gente historias con las que puedan identificarse y fascinarse.</p>
+            <p>Disfruto muchísimo de dibujar y animar en mis tiempos libres, buscando un estilo único con el que la gente pueda reconocerme.</p>
+            <p>Me apasionan las partes del <strong>storyboard, animatic, rough-animation, lineart de la animación, los detalles y el coloreado</strong>. Aunado a eso, también tengo <strong>conocimientos en blender</strong>, siendo estos en el <strong>modelado sencillo 3D, implementación de huesos, asignación de pesos y animación</strong>.</p>
+            <p>También, gracias a lo que actualmente me encuentro estudiando, la parte del <strong>back-end</strong> es también algo de lo que disfruto, conociendo <strong>lenguajes como C#, C, Java, y actualmente haciendo uso de Kotlin y python</strong>. Y, por obvias razones, el <strong>front-end</strong> no se queda atrás!, siendo que puedo especializarme en el <strong>maquetado de una página web, el prototipaje, diseños de logos</strong> y demás.</p>
+            <p class="mb-0"><strong>¡Si te interesa todo esto que hago, échale un vistazo a mi portafolio!</strong></p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <!-- Qué hago-->
+  <section class="container py-4">
+    <div class="row text-center">
+      <div class="col-12 col-md-4 mb-4">
+        <i class="fa-solid fa-pen-nib fa-3x icono"></i>
+        <h3 class="h4 mt-2">Ilustración y animación 2D</h3>
+        <p>Storyboard, animatic, rough animation, lineart y coloreado.</p>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <i class="fa-solid fa-cube fa-3x icono"></i>
+        <h3 class="h4 mt-2">Modelado 3D en Blender</h3>
+        <p>Modelado sencillo, rigging, asignación de pesos y animación.</p>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <i class="fa-solid fa-code fa-3x icono"></i>
+        <h3 class="h4 mt-2">Desarrollo de software</h3>
+        <p>Back-end con C#, C, Java, Kotlin y Python; front-end y prototipado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio-->
+  <section id="portafolio">
+    <div class="banner text-center text-white py-5"><h2 class="mb-0">MI PORTAFOLIO</h2></div>
+    <div class="container py-5">
+      <p class="text-center mb-5">Dibujos, animaciones 2D, modelos 3D en Blender y prototipos de Figma. Toca una imagen para verla en grande.</p>
+
+      <input type="radio" name="categoria" id="f-dibujos" checked hidden>
+      <input type="radio" name="categoria" id="f-animacion" hidden>
+      <input type="radio" name="categoria" id="f-3d" hidden>
+      <input type="radio" name="categoria" id="f-figma" hidden>
+
+      <div class="botones d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <label for="f-dibujos" class="btn boton">Dibujos</label>
+        <label for="f-animacion" class="btn boton">Animación</label>
+        <label for="f-3d" class="btn boton">Modelado 3D</label>
+        <label for="f-figma" class="btn boton">Figma / UI</label>
+      </div>
+
+      <!-- Dibujos -->
+      <div class="categoria cat-dibujos">
+        <h3 class="mb-3">Dibujos</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Lose.png">
+                <img src="Imagenes/Lose.png" class="card-img-top" alt="Ilustración Concept Art, dibujo digital por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Ilustración Concept Art</h4>
+                <p class="card-text">Dibujo digital</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Brook.png">
+                <img src="Imagenes/Brook.png" class="card-img-top" alt="Brook, ilustración digital / fanart por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Brook</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Sarah y Adrian.png">
+                <img src="Imagenes/Sarah y Adrian.png" class="card-img-top" alt="Sarah Y Adrián, ilustración digital / personajes originales"></a>
+              <div class="card-body">
+                <h4 class="h6">Sarah Y Adrián</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Pasto.png">
+                <img src="Imagenes/Pasto.png" class="card-img-top" alt="Pasto, ilustración digital / personajes originales"></a>
+              <div class="card-body">
+                <h4 class="h6">Pasto</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Len.png">
+                <img src="Imagenes/Len.png" class="card-img-top" alt="Lensito, ilustración digital / fanart por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Lensito</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Jitter.png">
+                <img src="Imagenes/Jitter.png" class="card-img-top" alt="JitterBug, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">JitterBug</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Mustang.png">
+                <img src="Imagenes/Mustang.png" class="card-img-top" alt="Mustang, ilustración digital / fanart por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Mustang</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Adrián.png">
+                <img src="Imagenes/Adrián.png" class="card-img-top" alt="Estrellita, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">Estrellita</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/pequenita.png">
+                <img src="Imagenes/pequenita.png" class="card-img-top" alt="Pequeñita, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">Pequeñita</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/hands.png">
+                <img src="Imagenes/hands.png" class="card-img-top" alt="Manitas, ilustración digital / personajes originales"></a>
+              <div class="card-body">
+                <h4 class="h6">Manitas</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/pink (1).png">
+                <img src="Imagenes/pink (1).png" class="card-img-top" alt="Rosado, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">Rosado</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Besitos.png">
+                <img src="Imagenes/Besitos.png" class="card-img-top" alt="Besitos, ilustración digital / personajes originales"></a>
+              <div class="card-body">
+                <h4 class="h6">Besitos</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Conejito01.png">
+                <img src="Imagenes/Conejito01.png" class="card-img-top" alt="Conejito, ilustración digital / fanart por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Conejito</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Conejito02.png">
+                <img src="Imagenes/Conejito02.png" class="card-img-top" alt="Conejito II, ilustración digital / comisión"></a>
+              <div class="card-body">
+                <h4 class="h6">Conejito II</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Conejito03.png">
+                <img src="Imagenes/Conejito03.png" class="card-img-top" alt="Conejito III, ilustración digital / comisión"></a>
+              <div class="card-body">
+                <h4 class="h6">Conejito III</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Conejito04.png">
+                <img src="Imagenes/Conejito04.png" class="card-img-top" alt="Conejito IV, ilustración digital / comisión"></a>
+              <div class="card-body">
+                <h4 class="h6">Conejito IV</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Sarah02.png">
+                <img src="Imagenes/Sarah02.png" class="card-img-top" alt="Sarah I, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">Sarah I</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/Sarah01.png">
+                <img src="Imagenes/Sarah01.png" class="card-img-top" alt="Sarah II, ilustración digital / personaje original"></a>
+              <div class="card-body">
+                <h4 class="h6">Sarah II</h4>
+                <p class="card-text">Ilustración digital / Fanart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animación -->
+      <div class="categoria cat-animacion">
+        <h3 class="mb-3">Animación</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
+          <div class="col">
+            <div class="card h-100">
+              <a href="Gifs_Videos/Pinguii.gif">
+                <img src="Gifs_Videos/Pinguii.gif" class="card-img-top" alt="Pingu gif, final por Choyo">
+              </a>
+              <div class="card-body">
+                <h4 class="h6">Pingu gif</h4>
+                <p class="card-text">Final</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/PunkRough.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">¡Punk!</h4>
+                <p class="card-text">Rough Animation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/Animatic Sarah.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Sarah</h4>
+                <p class="card-text">Rough Animation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/RoughAdri.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">That Boy</h4>
+                <p class="card-text">Rough Animation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/AnimaticAdri.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">That Boy</h4>
+                <p class="card-text">Animatic</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/pinguiNooo.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Chintrolas</h4>
+                <p class="card-text">Animación</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/Tucancito.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Tucancito</h4>
+                <p class="card-text">Animación</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/TucancitoGato.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Tucán y Gato</h4>
+                <p class="card-text">Animación</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/ChoyoAnimatic.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Choyo Animatic</h4>
+                <p class="card-text">Animatic</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/ChoyoLineart.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Choyo Lineart</h4>
+                <p class="card-text">Lineart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/ChoyoColor.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Choyo Color</h4>
+                <p class="card-text">Color</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/ChoyoFinal.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Choyo Final</h4>
+                <p class="card-text">Final</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/FinalPhoebeTigre.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Caminata y Tigre</h4>
+                <p class="card-text">Animación</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/PhoebeLineart.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Phoebe Lineart</h4>
+                <p class="card-text">Lineart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/PhoebeFondo.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Phoebe Fondo</h4>
+                <p class="card-text">Fondo y Lineart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/PhoebeTigre.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Phoebe Tigre</h4>
+                <p class="card-text">Prueba Tigre</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/PhoebeFinal.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Phoebe</h4>
+                <p class="card-text">Animación</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/LonelyRough.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Lonely Rough</h4>
+                <p class="card-text">Rough Animation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/LonelyLineart.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Lonely Lineart</h4>
+                <p class="card-text">Lineart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/LonelyColor.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Lonely Color</h4>
+                <p class="card-text">Color</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/LonelyShaders.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Lonely Shaders</h4>
+                <p class="card-text">Shaders</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <video src="Gifs_Videos/LonelyFinal.mp4" class="card-img-top" controls preload="metadata"></video>
+              <div class="card-body">
+                <h4 class="h6">Lonely Final</h4>
+                <p class="card-text">Final</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelado 3D -->
+      <div class="categoria cat-3d">
+        <h3 class="mb-3">Modelado 3D</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
+          <div class="col">
+            <div class="card h-100">
+              <a href="Gifs_Videos/GotaGifSentao.gif">
+                <img src="Gifs_Videos/GotaGifSentao.gif" class="card-img-top" alt="Modelo 3D en Blender, modelado y rigging por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">Modelo 3D en Blender</h4>
+                <p class="card-text">Modelado y Rigging</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Figma / UI -->
+      <div class="categoria cat-figma">
+        <h3 class="mb-3">Figma / UI</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
+          <div class="col">
+            <div class="card h-100">
+              <a href="Imagenes/PrototipoFigma.png">
+                <img src="Imagenes/PrototipoFigma.png" class="card-img-top" alt="UI/UX App Móvil, maquetado y prototipado por Choyo"></a>
+              <div class="card-body">
+                <h4 class="h6">UI/UX App Móvil</h4>
+                <p class="card-text">Maquetado y Prototipado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Formulario de contacto-->
+  <section id="contacto" class="container py-5">
+    <h2 class="text-center mb-4">¡Contáctame!</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <form action="mailto:bl8samest@gmail.com" method="post" enctype="text/plain">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn boton">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie text-white py-5">
+    <div class="container">
+      <div class="row align-items-center text-center">
+        <div class="col-12 col-md-4 mb-3">
+          <a href="https://x.com/LiyosaL" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter fa-2x me-3"></i></a>
+          <a href="https://www.instagram.com/shoujoyoo?stkn=MXFudHJmd252aWowMw==" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram fa-2x me-3"></i></a>
+          <a href="mailto:bl8samest@gmail.com" aria-label="Correo electrónico"><i class="fa-solid fa-envelope fa-2x"></i></a>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <p class="mb-1"><a href="#sobre-mi">Sobre mí</a></p>
+          <p class="mb-1"><a href="#portafolio">Portafolio</a></p>
+          <p class="mb-0"><a href="mailto:bl8samest@gmail.com">Contacto</a></p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <img src="Imagenes/LogoTransparente.png" height="90" alt="Logo de Choyo">
+          <p class="h2 mb-0">Choyo</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
